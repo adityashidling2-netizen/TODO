@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    width: 100%;
+    height: 5em;
+    background-image: url(nav.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    color: rgb(17, 128, 179) ;
+    font-size: clamp(2rem, 3vw , 1em);
+}
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0fdfa, #9de1fe);
+}
+
+
+.maincard{
+    margin: 2em auto;
+    background-image: url(todo.jpeg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: min(35em, 95%);
+    min-height: 70vh;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: min(2em, 5%);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    gap: 5em;
+
+    position: relative;
+    overflow: hidden;
+}
+.maincard::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("todo.jpeg");
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(3px);
+
+    transform: scale(1.05);
+
+    z-index: 0;
+}
+
+.inp{
+    padding: min(8px, 6%);
+    width: 20em;
+    padding-left: 4px ;
+    border: 2px solid white;
+    border-radius: 6px;
+    background: rgba(141, 194, 255, 0.85);
+    color: #164e63;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: clamp(12px, 2vw, 16px);
+
+    position: relative;
+    z-index: 1;
+}
+.inp::placeholder{
+    color: rgb(255, 254, 254);
+}
+.inp:hover{
+    border: 2px solid #aee5f9;
+}
+.inp:focus{
+    outline: none;
+    border: 2px solid #03a6e1;
+}
+
+.btn{
+    color: white;
+    font-weight: 600;
+    padding: clamp(10px, 8%, 2px);
+    background-color: #03a6e1;
+    border: none;
+    border-radius: 6px;
+    margin-top: 4px;
+
+    position: relative;
+    z-index: 1;
+
+    transition: all 0.3s ease-in-out;
+}
+.btn:hover{
+    transform: scale(1.06);
+    background-color: #f1f4f5;
+    color: black;
+}
+
+
+.addcard{
+    width: min(28em, 90%);
+}
+.sercard{
+    width: min(28em, 90%);
+}
+
+@media screen and (max-width: 780px) {
+    .inp{
+        width: 24em;
+    }
+    .btn{
+        font-size: 12px;
+    }
+    
+}
+@media screen and (max-width:480px) {
+    .maincard{
+        width: 100%;
+        border-radius: 0px;
+        margin: 0;
+        min-height: 60vh;
+    }
+    h1{
+        font-size: 22px;
+    }
+    .inp{
+        width: 90%;
+    }
+    .btn{
+        font-size: 10px;
+        width: 95%;
+    }
+}
+@media screen and (max-width:320px) {
+    h1{
+        font-size: 18px;
+    }
+    .inp{
+        width: 92%;
+    }
+    .btn{
+        width: 100%;
+    }
+}
