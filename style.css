@@ -33,7 +33,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: min(40em, 95%);
+    width: min(50em, 95%);
     min-height: 70vh;
     border: none;
     border-radius: 15px;
